@@ -42,6 +42,8 @@ const apiKey = "YOUR_API_KEY";
 
 📸 Screenshots
 <img width="1544" height="871" alt="Screenshot 2025-09-27 105748" src="https://github.com/user-attachments/assets/653e0492-36f1-4d8a-b561-6d8c8a194622" />
+<img width="1859" height="866" alt="Screenshot 2025-09-28 115756" src="https://github.com/user-attachments/assets/a898b908-cd7e-462a-beb6-58280799fd5d" />
+
 
 
 👨‍💻 Author
