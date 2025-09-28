@@ -1,0 +1,273 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+
+body, html {
+  height: 100%;
+  background: linear-gradient(to bottom right, #83a4d4, #b6fbff); /* soft gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main container */
+.container {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  width: 90%;
+  max-width: 500px;
+
+}
+
+/* Weather container */
+.weather_container {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.temp {
+  font-size: 4rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.temp:hover{
+    color: darkslategray;
+}
+
+.time_location {
+  margin-top: 1rem;
+}
+
+.time_location p,
+.time_location span {
+  display: block;
+  margin-top: 0.6rem
+}
+.place{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    font-size:xx-large;
+    transition: color 0.3s ease;
+}
+.place:hover{
+    color: darkslategray;
+}
+.region{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    transition: color 0.3s ease;
+}
+.region:hover{
+    color: darkslategray;
+}
+
+.dates{
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+.days{
+    font-size: large;
+    font-weight: 600;
+}
+
+/* Weather condition section */
+.condition {
+  margin-top: 1.5rem;
+}
+
+.condition p {
+  font-size: 30px;
+  margin-bottom: 0.5rem;
+  color:darkslategray;
+  font-weight: 600;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  transition: color 0.3s ease;
+}
+.condition p:hover{
+  color: #ffffff;
+}
+
+.weather-icon {
+  width: 64px;
+  height: 64px;
+}
+
+/* Navbar (search form) */
+.navbar {
+  text-align: center;
+}
+
+.search_area {
+  padding: 0.5rem;
+  width: 70%;
+  border: none;
+  border-radius: 8px;
+  margin-right: 0.5rem;
+  box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.2);
+}
+
+.search_button {
+  padding: 0.5rem 1rem;
+  border: none;
+  margin-top: 10px;
+  border-radius: 8px;
+  background-color: #ffffffcc;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.search_button:hover {
+  background-color: #ffffff;
+}
+
+.times{
+  font-weight: 500;
+  font-size: 30px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  transition: color 0.3s ease;
+}
+.times:hover{
+  color: darkslategray;
+}
+.dates,.days{
+  font-size: 25px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  transition: color 0.3s ease;
+}
+.dates:hover,.days:hover{
+  color: darkslategray;
+}
+
+.heading{
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  transition: color 0.3s ease;
+
+}
+.heading:hover{
+  color: darkslategray;
+}
+/* Background animation container */
+.weather-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* keeps it behind the container */
+}
+
+/* Sun */
+.sun {
+  position: absolute;
+  top: 50px;
+  right: 80px;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #FFD700, #FFA500);
+  border-radius: 50%;
+  animation: rotate-sun 20s linear infinite;
+}
+
+@keyframes rotate-sun {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Clouds */
+.cloud {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.9;
+  animation: move-clouds 60s linear infinite;
+}
+
+.cloud::before,
+.cloud::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.cloud1 {
+  width: 120px;
+  height: 60px;
+  top: 100px;
+  left: -150px;
+  animation-duration: 40s;
+}
+
+.cloud1::before {
+  width: 60px;
+  height: 60px;
+  left: -30px;
+  top: 0;
+}
+.cloud1::after {
+  width: 80px;
+  height: 80px;
+  left: 50px;
+  top: -20px;
+}
+
+.cloud2 {
+  width: 150px;
+  height: 80px;
+  top: 200px;
+  left: -200px;
+  animation-duration: 60s;
+}
+
+.cloud2::before {
+  width: 70px;
+  height: 70px;
+  left: -35px;
+  top: 5px;
+}
+.cloud2::after {
+  width: 90px;
+  height: 90px;
+  left: 60px;
+  top: -25px;
+}
+
+/* Cloud movement */
+@keyframes move-clouds {
+  from { transform: translateX(-200px); }
+  to { transform: translateX(120vw); }
+}
+.sunny-bg {
+  background: linear-gradient(to bottom, #87CEEB, #FFD700);
+}
+
+.rainy-bg {
+  background: linear-gradient(to bottom, #2c3e50, #3498db);
+}
+
+.cloudy-bg {
+  background: linear-gradient(to bottom, #bdc3c7, #2c3e50);
+}
+
+.night-bg {
+  background: linear-gradient(to bottom, #2c3e50, #000000);
+}
