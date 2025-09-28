@@ -8,7 +8,7 @@ A responsive weather application built with **HTML, CSS, and JavaScript**, integ
 - 🌍 Search weather information for any city across the globe  
 - 📡 Live data fetched from [WeatherAPI](https://www.weatherapi.com/)  
 - 📱 Responsive design for both desktop and mobile devices  
-- 🌡️ Displays temperature, weather condition, humidity, and wind speed  
+- 🌡️ Displays temperature, weather condition, place, time. 
 
 ---
 
